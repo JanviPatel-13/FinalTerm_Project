@@ -62,3 +62,15 @@ for order in orders_data:
 conn.commit()
 conn.close()
 print("Database initialized successfully!")
+
+
+# This script initializes the SQLite database with the schema and data from example_orders.json.
+# It creates the necessary tables and populates them with the provided order data.
+# The script handles the creation of customers, items, orders, and order_items tables,
+# ensuring that all foreign key relationships are maintained.
+# It also ensures that duplicate customers and items are not inserted into the database.
+# The database is stored in a file named db.sqlite.
+# The script uses the sqlite3 library to interact with the SQLite database.
+# The JSON file example_orders.json should be in the same directory as this script.
+# The script uses the INSERT OR IGNORE statement to avoid duplicate entries for customers and items.
+
